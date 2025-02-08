@@ -1,0 +1,56 @@
+task0:
+  description: >
+    Read the following newsgroup post. Classify it as one of the following:
+    - "SPAM" (if it's promotional, phishing, or irrelevant)
+    - "VULGAR" (if it contains offensive language)
+    - "SAFE" (if it is a legitimate discussion)
+    ### NEWGROUP POST:
+    {{discussion}}
+  expected_output: >
+    One of the following: "SPAM", "VULGAR", or "SAFE".
+
+task1:
+  description: >
+    Analyse in detail the following discussion:
+    ### DISCUSSION:
+    {{discussion}}
+  expected_output: >
+    A detailed analysis of the discussion, identifying who said what and rewording if necessary while maintaining the main discussion points.
+
+task2:
+  description: >
+    Create a dialogue-heavy screenplay from the discussion, between two persons.
+    Do NOT write parentheticals. Leave out wrylies.
+    You MUST SKIP directional notes.
+  expected_output: >
+    A screenplay dialogue consisting only of the dialogue parts between two persons, without parentheticals, wrylies, or directional notes.
+
+task3:
+  description: >
+    Format the script exactly like this:
+      ## (person 1):
+      (first text line from person 1)
+             
+      ## (person 2):
+      (first text line from person 2)
+             
+      ## (person 1):
+      (second text line from person 1)
+             
+      ## (person 2):
+      (second text line from person 2)
+  expected_output: >
+    A formatted script with the specified structure, ensuring each line is formatted according to the provided template.
+
+task4:
+  description: >
+    Score the following script based on:
+      - Dialogue coherence (1-10)
+      - Engagement level (1-10)
+      - Realism (1-10)
+      - Structure adherence (1-10)
+    ### SCRIPT:
+    {{script}}
+  expected_output: >
+    A score breakdown like:
+    "Coherence: 8, Engagement: 9, Realism: 7, Structure: 10. Final Score: 8.5/10"
